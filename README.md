@@ -23,3 +23,6 @@ Ubuntu Build
 ============
 sudo apt-get install cmake libclang-dev libboost-iostreams-dev libdb++-dev
 
+Debug Build
+===========
+cmake -DCMAKE_BUILD_TYPE=Debug
