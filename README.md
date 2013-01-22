@@ -18,3 +18,8 @@ Please note that this is an early stage of a little project that I've been doing
 life easier.  It has very sharp edges and I haven't really invested much effort in making it easy to
 use.  Use at your own peril, it will destroy your code, format your hard drive, eat your children,
 etc.
+
+Ubuntu Build
+============
+sudo apt-get install cmake libclang-dev libboost-iostreams-dev libdb++-dev
+
