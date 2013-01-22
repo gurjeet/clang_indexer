@@ -12,10 +12,12 @@ find $SOURCE_PATH\
     -name "*.h"\
     | sort > files2.txt
 
+CLANG_COMPLETE_CONTENTS=$(cat ${SOURCE_PATH}/.clang_complete)
+
 add_to_index() {
     INDEX_FILE=`echo ${1}.i.gz | tr "/" "%"`
-    echo clic_add index.db $INDEX_FILE `cat ${SOURCE_PATH}/.clang_complete` $1
-    clic_add index.db $INDEX_FILE `cat ${SOURCE_PATH}/.clang_complete` $1
+    echo clic_add index.db $INDEX_FILE ${CLANG_COMPLETE_CONTENTS} $1
+    clic_add index.db $INDEX_FILE  ${CLANG_COMPLETE_CONTENTS} $1
 }
 
 remove_from_index() {
